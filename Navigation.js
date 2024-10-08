@@ -11,6 +11,10 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Cal from "./screens/Calculadora";
 import PaginasDeNoticias from "./screens/PaginaDeNoticias";
+import PaginaTextoImagen from "./screens/PaginaTextoImagen";
+import ExamHub from "./screens/ExamHub";
+import PaginaBotonesYColor from "./screens/PaginaBotonesYColor";
+import PaginaVideo from "./screens/PaginaVideo";
 
 const HomeStackNavigator = createNativeStackNavigator();
 
@@ -30,6 +34,34 @@ function MyStack() {
                     headerTitle: "Go Casa"
                 }}
             />
+            <HomeStackNavigator.Screen
+                name="Examen"
+                component={ExamHub}
+                options={{
+                    headerTitle: "Go Back"
+                }}
+            />
+            <HomeStackNavigator.Screen
+                name="PaginaTextoImagen"
+                component={PaginaTextoImagen}
+                options={{
+                    headerTitle: "Go Back"
+                }}
+            />
+            <HomeStackNavigator.Screen
+                name="PaginaVideo"
+                component={PaginaVideo}
+                options={{
+                    headerTitle: "Go Back"
+                }}
+            />
+            <HomeStackNavigator.Screen
+                name="PaginaBotonesYColor"
+                component={PaginaBotonesYColor}
+                options={{
+                    headerTitle: "Go Back"
+                }}
+            />
         </HomeStackNavigator.Navigator>
     )
 }
@@ -43,7 +75,7 @@ function MyTabs() {
         screenOptions={{
             tabBarActiveTintColor : 'blue',
         }}
-        >
+        >{
             <Tab.Screen 
                 name="Home" 
                 component={MyStack}
@@ -52,10 +84,10 @@ function MyTabs() {
                     tabBarIcon: ({ color, size}) => (
                         <MaterialCommunityIcons name="home" size={24} color="black" />
                     ),
-                    tabBarBadge: 10,
+                    tabBarBadge: 1,
                     headerShown: false
                 }}
-                />
+                />/*
             <Tab.Screen 
                 name="Settings" 
                 component={SettingsScreen}
@@ -65,7 +97,7 @@ function MyTabs() {
                         <Ionicons name="settings-sharp" size={24} color="black" />
                     )
                 }}
-                />
+                />/*
             <Tab.Screen 
                 name="Cal" 
                 component={Cal}
@@ -85,7 +117,7 @@ function MyTabs() {
                         <Ionicons name="settings-sharp" size={24} color="black" />
                     )
                 }}
-                />
+                />*/}
         </Tab.Navigator>
     );
 }

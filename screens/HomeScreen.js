@@ -36,6 +36,27 @@ const HomeScreen = () => {
                 Go To Stack Pantalla
                 </Text>
             </TouchableOpacity>
+            <TouchableOpacity
+            onPress={() => navigation.navigate("Examen")}
+            style={{
+                backgroundColor: "purple",
+                padding: 10,
+                marginTop: "20%",
+                width: "50%",
+                alignSelf: "center",
+                borderRadius: 10,
+            }}
+            >
+                <Text
+                style={{
+                    fontSize: 15,
+                    textAlign: "center",
+                    color: "white"
+                }}
+                >
+                Go To Exam
+                </Text>
+            </TouchableOpacity>
         </View>
     );
 }
